@@ -12,7 +12,10 @@ public class JPAUtil {
     private static final EntityManagerFactory FACTORY;
 
     static {
-        Dotenv dotenv = Dotenv.load();
+        Dotenv dotenv = Dotenv.configure()
+                .directory("./")
+                .ignoreIfMissing()
+                .load();
 
         Map<String, String> props = new HashMap<>();
         props.put("jakarta.persistence.jdbc.url", dotenv.get("DB_URL"));

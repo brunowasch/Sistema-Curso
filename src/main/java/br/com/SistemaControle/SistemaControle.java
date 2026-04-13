@@ -4,6 +4,7 @@ import br.com.SistemaControle.model.Aluno;
 import br.com.SistemaControle.model.Curso;
 import br.com.SistemaControle.model.Matricula;
 import jakarta.persistence.*;
+import br.com.SistemaControle.util.JPAUtil;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -18,8 +19,7 @@ public class SistemaControle {
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static void main(String[] args) {
-        emf = Persistence.createEntityManagerFactory("SistemaControle");
-        em = emf.createEntityManager();
+        em = JPAUtil.getEntityManager();
 
         int opcao = -1;
         while (opcao != 0) {
