@@ -1,0 +1,32 @@
+### IDEs (IntelliJ, Eclipse, NetBeans, VS Code) ###
+.idea/
+*.iml
+out/
+gen/
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+bin/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+.vscode/
+
+### Build Tools (Maven/Gradle) ###
+target/
+build/
+.gradle/
+
+### Sistema Operacional ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Segredos (CRÍTICO) ###
+.env
